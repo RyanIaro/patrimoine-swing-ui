@@ -1,4 +1,14 @@
-export default function Input() {
+export default function Input({
+  agregat,
+  tresorerie,
+  immobilisations,
+  obligations
+}: {
+  agregat: boolean,
+  tresorerie: boolean,
+  immobilisations: boolean,
+  obligations: boolean
+}) {
   return (
     <div className="flex flex-col h-28 gap-1">
       <div className="m-1">
@@ -10,19 +20,19 @@ export default function Input() {
       </div>
       <div className="flex justify-around">
         <div>
-          <input type="checkbox" name="Agrégat" id="Agrégat" />
+          <input checked={agregat} type="checkbox" name="Agrégat" id="Agrégat" />
           <label className="ml-1" htmlFor="Agrégat">Agrégat</label>
         </div>
         <div>
-          <input type="checkbox" name="Trésorerie" id="Trésorerie" />
+          <input checked={tresorerie} type="checkbox" name="Trésorerie" id="Trésorerie" />
           <label className="ml-1" htmlFor="Trésorerie">Trésorerie</label>
         </div>
         <div>
-          <input type="checkbox" name="Immobilisation" id="Immobilisation" />
+          <input checked={immobilisations} type="checkbox" name="Immobilisation" id="Immobilisation" />
           <label className="ml-1" htmlFor="Immobilisation">Immobilisation</label>
         </div>
         <div>
-          <input type="checkbox" name="Obligations" id="Obligations" />
+          <input checked={obligations} type="checkbox" name="Obligations" id="Obligations" />
           <label className="ml-1" htmlFor="Obligations">Obligations</label>
         </div>
       </div>

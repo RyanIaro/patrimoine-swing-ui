@@ -1,9 +1,9 @@
 import Image from "next/image";
 
-export default function Output2() {
+export default function Output2({number}: {number: number}) {
   return (
     <Image
-    src={"/4.png"}
+    src={`/${number}.png`}
     alt="chart"
     fill
     />
